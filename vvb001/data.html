@@ -1,0 +1,69 @@
+<script type="text/html" data-template-name="iolink-VVB001-get-data">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-ip"><i class="icon-tag"></i> IOLink Master IP</label>
+    <input
+      type="text"
+      id="node-input-ip"
+      style="width: 70%;"
+      placeholder="payload"
+    />
+    <input type="hidden" id="node-input-ipType" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-port"><i class="icon-tag"></i> IOLink Port</label>
+    <input
+      type="number"
+      id="node-input-port"
+      placeholder="IOLink Port Number"
+    />
+  </div>
+  <div class="form-row">
+    <label for="node-input-topic"><i class="fa fa-tasks"></i> Topic</label>
+    <input type="text" id="node-input-topic" placeholder="Topic" />
+  </div>
+</script>
+
+<script type="text/html" data-help-name="iolink-VVB001-get-data">
+  <p>
+    VVB001 Vibration Sensor: Outputs the monitoring data (V rms, A rms, A peak,
+    Temperature and Crest).
+  </p>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('iolink-VVB001-get-data', {
+    category: 'inuse ifm iolink vvb001',
+    color: '#ffcc66',
+    defaults: {
+      name: { value: 'VVB001 data' },
+      ip: { value: '127.0.0.1', required: true },
+      ipType: { value: 'str' },
+      port: { value: 1, require: true },
+      topic: { value: '' },
+    },
+    icon: 'font-awesome/fa-wifi',
+    inputs: 1,
+    outputs: 1,
+    label: function () {
+      return this.name || 'VVB001 data'
+    },
+    paletteLabel: 'get data',
+    oneditprepare: function () {
+      // Make sure we can reference parent this in async fns
+      var _this = this
+
+      if (!this.iptType) {
+        this.ipType = 'str'
+      }
+      $('#node-input-ip').typedInput({
+        default: 'str',
+        types: ['msg', 'flow', 'global', 'str'],
+        typeField: $('#node-input-ipType'),
+      })
+    },
+  })
+</script>

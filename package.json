@@ -1,0 +1,44 @@
+{
+  "name": "node-red-contrib-ifm-vvb001",
+  "version": "0.0.1",
+  "description": "A Node red package that handles communication with an ifm VVB001 sensor through iolink.",
+  "scripts": {
+    "eslint": "eslint vvb001/",
+    "prettier:check": "prettier --list-different \"**/*.{js,md}\"",
+    "prettier": "prettier --write \"**/*.{js,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/optimdata/piu-edge.git"
+  },
+  "keywords": [
+    "node-red",
+    "iolink",
+    "ifm",
+    "vvb001"
+  ],
+  "node-red": {
+    "nodes": {
+      "iolink-VVB001": "vvb001/data.js",
+      "iolink-VVB001-stream-blob": "vvb001/stream-blob.js",
+      "iolink-VVB001-status-blob": "vvb001/status-blob.js",
+      "iolink-VVB001-abort-blob": "vvb001/abort-blob.js"
+    }
+  },
+  "author": "Othman Moumni Abdou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/optimdata/piu-edge/issues"
+  },
+  "homepage": "https://github.com/optimdata/piu-edge#readme",
+  "dependencies": {
+    "node-fetch": "2.6.6"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "prettier": "^2.4.1"
+  }
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "be4c575bafaf7f8d",
+    "type": "tab",
+    "label": "exemple get data",
+    "disabled": false,
+    "info": "Basic example to retrieve monitoring data every 10 seconds. ",
+    "env": []
+  },
+  {
+    "id": "1bb72fb2aa0aa0f3",
+    "type": "inject",
+    "z": "be4c575bafaf7f8d",
+    "name": "",
+    "props": [],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 180,
+    "y": 240,
+    "wires": [["4aae567d483b17cb"]]
+  },
+  {
+    "id": "4aae567d483b17cb",
+    "type": "iolink-VVB001-get-data",
+    "z": "be4c575bafaf7f8d",
+    "name": "VVB001 data",
+    "ip": "127.0.0.1",
+    "ipType": "str",
+    "port": 1,
+    "topic": "",
+    "x": 330,
+    "y": 240,
+    "wires": [["fe48c60c24ef337b"]]
+  },
+  {
+    "id": "fe48c60c24ef337b",
+    "type": "debug",
+    "z": "be4c575bafaf7f8d",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 490,
+    "y": 240,
+    "wires": []
+  }
+]
