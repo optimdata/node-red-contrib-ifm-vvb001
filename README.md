@@ -60,13 +60,13 @@ This node will return a modified `msg` with the following `payload`:
 
 where:
 
-- v_Rms is the speed root mean square in m/s
-- a_Peak is the acceleration peak in m/s^2
-- a_Rms is the acceleration root mean square in m/s^2
-- Temperature is the temperature is celsius degrees
-- Crest
-- Status is the device status
-- ts is the timestamp of this event
+- `v_Rms` is the speed root mean square in m/s
+- `a_Peak` is the acceleration peak in m/s^2
+- `a_Rms` is the acceleration root mean square in m/s^2
+- `Temperature` is the temperature is celsius degrees
+- `Crest`
+- `Status` is the device status
+- `ts` is the timestamp of this event
 
 ## Usage of _get data_
 
@@ -96,6 +96,7 @@ The `stream blob` node will return a modified `msg` with the following `payload`
 
 where:
 
-- length is the BLOB length in bytes (200K)
-- acceleration is the raw acceleration recorded on 4 seconds using 25 KHz acquisition (vector of 100K values)
-- crc is the CRC signature of the BLOB
+- `length` is the BLOB length in bytes (200K)
+- `acceleration` is the raw acceleration recorded on 4 seconds using 25 KHz acquisition (vector of 100K values)
+- `crc` is the CRC signature of the BLOB
+- `ts` is the start timestamp of this recording
