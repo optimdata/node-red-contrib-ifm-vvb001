@@ -2,14 +2,14 @@
 
 [Node-RED](http://nodered.org) nodes that handles data transfers from [IFM VVB sensors](https://www.ifm.com/fr/en/product/VVB001).
 
-It includes the following nodes:
+It includes the following nodes to retrieve monitoring data and transfer a raw acceleration **BLOB**\*:
 
 - `get data`: Gets the monitoring data from a VVB sensorO (V rms, A rms, A peak, Temperature and Crest).
-- `stream blob`: Start a BLOB\* generation, extract it and convert it to m/s^2 unit.
+- `stream blob`: Start a BLOB generation, extract it and convert it to m/s^2 unit.
 - `blob status`: Return the status of the BLOB (ex: transmission is in progress or idle)
-- `abort blob` : Run the abort blob transfer command. If the data transfer must be stopped before to reach of the BLOB end, the transfer must be aborted. If not, a new Start command for reading the BLOB can't be raised with success.
+- `abort blob` : Run the abort BLOB transfer command. If the data transfer must be stopped before the end of the transfer, the transfer must be aborted. If not, a new Start command for reading the BLOB can't be raised with success.
 
-\*BLOB: A BLOB is a record of raw acceleration at a high frequency (4 seconds at a frequency of 25 KHz which represents a time serie of 100K values)
+\*A **BLOB** is a record of raw acceleration at a high frequency (4 seconds at a frequency of 25 KHz which represents a time serie of 100K values)
 
 <a name="installation"></a>
 
@@ -68,7 +68,7 @@ where:
 - `Status` is the device status
 - `ts` is the timestamp of this event
 
-## Usage of _get data_
+## Usage of _stream blob_
 
 <a name="usage_stream_blob"></a>
 
