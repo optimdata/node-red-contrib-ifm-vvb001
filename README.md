@@ -40,7 +40,7 @@ Basic installation:
 
 The easiest usage of the node `get data` is the following:
 
-![get-data-basic-usage](images/example-get-data.png 'get-data basic usage')
+<img src="images/example-get-data.png" alt="get-data basic usage"/>
 
 This node will return a modified `msg` with the following `payload`:
 
@@ -74,7 +74,7 @@ where:
 
 The easiest usage of the node `stream blob` is the following:
 
-![stream-blob-basic-usage](images/example-stream-blob.png 'stream-blob basic usage')
+<img src="images/example-stream-blob.png" alt="stream-blob basic usage"/>
 
 The `blob status` node check if there is an ongoing blob acquisition. If it is the case, you cannot run stream blob until the actual blob transfer is finished or aborted using `abort blob`.",
 
