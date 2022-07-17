@@ -76,7 +76,7 @@ The easiest usage of the node `stream blob` is the following:
 
 <img src="images/example-stream-blob.png" alt="stream-blob basic usage"/>
 
-The `blob status` node check if there is an ongoing blob acquisition. If it is the case, you cannot run stream blob until the actual blob transfer is finished or aborted using `abort blob`.",
+The `blob status` node check if there is an ongoing blob acquisition. If it is the case, you cannot run stream blob until the actual blob transfer is finished or aborted using `abort blob`.
 
 The `stream blob` node will return a modified `msg` with the following `payload`:
 
