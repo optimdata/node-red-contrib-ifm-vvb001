@@ -1,6 +1,6 @@
 {
   "name": "@inuse/node-red-contrib-ifm-vvb001",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Node red package that handles communication with an ifm VVB001 sensor through iolink.",
   "scripts": {
     "eslint": "eslint vvb001/",
