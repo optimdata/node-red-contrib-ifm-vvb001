@@ -1,6 +1,6 @@
 {
   "name": "@inuse/node-red-contrib-ifm-vvb001",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Node red package that handles communication with an ifm VVB001 sensor through iolink.",
   "scripts": {
     "eslint": "eslint vvb001/",
@@ -18,6 +18,7 @@
     "vvb001"
   ],
   "node-red": {
+    "version": ">=2.0.0",
     "nodes": {
       "iolink-VVB001": "vvb001/data.js",
       "iolink-VVB001-stream-blob": "vvb001/stream-blob.js",
@@ -25,14 +26,20 @@
       "iolink-VVB001-abort-blob": "vvb001/abort-blob.js"
     }
   },
-  "author": "Othman Moumni Abdou",
+  "author": {
+    "name": "Othman Moumni Abdou",
+    "url": "https://github.com/omoumniabdou"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/optimdata/node-red-contrib-ifm-vvb001/issues"
   },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "homepage": "https://github.com/optimdata/node-red-contrib-ifm-vvb001#readme",
   "dependencies": {
-    "node-fetch": "2.6.6"
+    "node-fetch": "2.6.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
